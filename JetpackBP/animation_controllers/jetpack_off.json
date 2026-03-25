@@ -1,0 +1,27 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.jetpack_off": {
+      "states": {
+        "JetpackOff": {
+          "transitions": [
+            {
+              "Off": "query.is_jumping != 1 && query.has_any_family('jetpack_on')"
+            }
+          ],
+          "on_entry": [
+            "/effect @s levitation 0",
+            "/effect @s slow_falling 0"
+          ]
+        },
+        "Off": {
+          "transitions": [
+            {
+              "JetpackOff": "query.is_jumping != 1 && query.has_any_family('jetpack_on')"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

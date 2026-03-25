@@ -1,0 +1,28 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:attachable": {
+    "description": {
+      "identifier": "is:jetpack_empty.player",
+      "item": {
+        "is:jetpack_empty": "query.owner_identifier == 'minecraft:player'"
+      },
+      "materials": {
+        "default": "armor",
+        "enchanted": "armor_enchanted"
+      },
+      "textures": {
+        "default": "textures/models/jetpack_empty",
+        "enchanted": "textures/misc/enchanted_item_glint"
+      },
+      "geometry": {
+        "default": "geometry.jetpack"
+      },
+      "scripts": {
+        "parent_setup": "variable.chest_layer_visible = 0.0;"
+      },
+      "render_controllers": [
+        "controller.render.armor"
+      ]
+    }
+  }
+}

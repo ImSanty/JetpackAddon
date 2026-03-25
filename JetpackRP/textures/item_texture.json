@@ -1,0 +1,24 @@
+{
+  "resource_pack_name": "vanilla",
+  "texture_name": "atlas.items",
+  "texture_data": {
+    "jetpack_full": {
+	  "textures": "textures/items/jetpack_full"
+   },
+    "jetpack_empty": {
+	  "textures": "textures/items/jetpack_empty"
+	 },
+	  "fuel_bottle": {
+    "textures": "textures/items/fuel_bottle"
+   },
+	  "solidified_petroleum": {
+		"textures": "textures/items/solidified_petroleum"
+   },
+	  "fuel_tank": {
+		"textures": "textures/items/fuel_tank"
+   },
+	  "propellant": {
+		"textures": "textures/items/propellant"
+    }
+  }      
+}

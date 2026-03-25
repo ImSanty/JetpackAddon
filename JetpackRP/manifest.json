@@ -1,0 +1,40 @@
+{
+  "format_version": 2,
+  "header": {
+    "name": "Jetpack Add-on [RP]",
+    "description": "Add-on by §b@ImSanty_",
+    "uuid": "5e1c9b3e-c755-4e3a-8862-ead3e80523c9",
+    "version": [
+      5,
+      0,
+      0
+    ],
+    "min_engine_version": [
+      1,
+      19,
+      0
+    ]
+  },
+  "modules": [
+    {
+      "description": "Add-on by §b@ImSanty_",
+      "type": "resources",
+      "uuid": "77e98e41-ff49-4b98-ab38-38bba75d3bdd",
+      "version": [
+        5,
+        0,
+        0
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "uuid": "2b79d279-d9e5-44d9-a7a7-bcbb92fa488e",
+      "version": [
+        5,
+        0,
+        0
+      ]
+    }
+  ]
+}

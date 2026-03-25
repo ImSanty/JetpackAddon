@@ -1,0 +1,10 @@
+﻿tile.is:petroleum_block.name=Bloque de petróleo
+tile.is:solidified_soil_block.name=Bloque de suelo endurecido
+tile.is:jetpack_stand.name=Soporte para jetpack
+item.is:fuel_bottle=Botella de combustible
+item.is:fuel_tank=Tanque de combustible
+item.is:jetpack=Jetpack
+item.is:jetpack_empty=Jetpack
+item.is:propellant=Propulsor
+item.is:solidified_petroleum=Petróleo solidificado
+entity.is:fuel_tank.name=Tanque de combustible

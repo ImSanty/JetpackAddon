@@ -1,0 +1,22 @@
+{
+	"format_version": "1.13.0",
+	"minecraft:structure_template_feature": {
+		"description": {
+			"identifier": "is:petroleum_deposit"
+		},
+		"structure_name": "mystructure:petroleum_deposit",
+		"adjustment_radius": 16,
+		"facing_direction": "south",
+		"constraints": {
+			"grounded": {},
+			"unburied": {},
+			"block_intersection": {
+				"block_allowlist": [
+					"minecraft:sand",
+					"minecraft:sandstone",
+					"minecraft:stone"
+				]
+			}
+		}
+	}
+}

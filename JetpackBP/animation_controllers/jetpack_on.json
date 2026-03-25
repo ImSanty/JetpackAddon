@@ -1,0 +1,31 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.jetpack_on": {
+      "states": {
+        "JetpackOn": {
+          "transitions": [
+            {
+              "On": "query.has_armor_slot(1) && query.is_jumping == 1 && query.has_any_family('jetpack_on')"
+            }
+          ],
+          "on_entry": [
+            "/function jetpack_function",
+            "/function fuel_standar",
+            "/execute @s[scores={power_mode=1}] ~ ~ ~ function fuel_turbo",
+            "/function jetpack_sound",
+            "/function jetpack_standar",
+            "/execute @s[scores={power_mode=1}] ~ ~ ~ function jetpack_turbo"
+          ]
+        },
+        "On": {
+          "transitions": [
+            {
+              "JetpackOn": "query.has_armor_slot(1) && query.is_jumping == 1 && query.has_any_family('jetpack_on')"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

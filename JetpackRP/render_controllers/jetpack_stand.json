@@ -1,0 +1,23 @@
+{
+  "format_version":"1.10",
+  "render_controllers": {
+    "controller.render.jetpack": {
+      "arrays": {
+        "textures": {
+          "Array.skins": [
+            "Texture.default",
+            "Texture.jetpack_stand_with_jetpack",
+            "Texture.jetpack_stand_charging0",
+            "Texture.jetpack_stand_charging1",
+            "Texture.jetpack_stand_charging2",
+            "Texture.jetpack_stand_charging3",
+            "Texture.jetpack_stand_charged"
+          ]
+        }
+      },
+      "geometry": "Geometry.default",
+      "materials": [ { "*": "Material.default" } ],
+      "textures": [ "Array.skins[query.Variant]" ]
+    }
+  }
+}

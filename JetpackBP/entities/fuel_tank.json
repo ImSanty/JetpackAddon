@@ -1,0 +1,64 @@
+{
+  "format_version": "1.12.0",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "is:fuel_tank",
+      "is_spawnable": false,
+      "is_summonable": false,
+      "is_experimental": false
+    },
+    "component_groups": {
+      "minecraft:exploding": {
+        "minecraft:explode": {
+          "fuse_length": 0,
+          "fuse_lit": true,
+          "power": 2.5,
+          "causes_fire": true,
+          "fire_affected_by_griefing": true,
+          "destroy_affected_by_griefing": true
+        }
+      }
+    },
+    "components": {
+      "minecraft:projectile": {
+        "on_hit": {
+          "definition_event": {
+            "affect_projectile": true,
+            "event_trigger": {
+              "event": "fuel_tank:explode",
+              "target": "self"
+            }
+          }
+        },
+        "power": 1.5,
+        "gravity": 0.0001,
+        "angle_offset": 0.3,
+        "catch_fire": true
+      },
+      "minecraft:collision_box": {
+        "width": 0.2,
+        "height": 0.3
+      },
+      "minecraft:physics": {},
+      "minecraft:pushable": {
+        "is_pushable": false,
+        "is_pushable_by_piston": false
+      },
+      "minecraft:damage_sensor": {
+        "triggers": {
+          "cause": "all",
+          "deals_damage": false
+        }
+      }
+    },
+    "events": {
+      "fuel_tank:explode": {
+        "add": {
+          "component_groups": [
+            "minecraft:exploding"
+          ]
+        }
+      }
+    }
+  }
+}

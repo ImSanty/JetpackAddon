@@ -1,0 +1,419 @@
+{
+  "format_version": "1.19.50",
+  "minecraft:block": {
+    "description": {
+      "identifier": "is:jetpack_stand",
+      "menu_category": {
+        "category": "construction"
+      },
+      "properties": {
+        "is:jetpack_stand_states": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "is:rotation": [
+          2,
+          3,
+          4,
+          5
+        ]
+      }
+    },
+    "components": {
+      "minecraft:material_instances": {
+        "*": {
+          "texture": "jetpack_stand",
+          "render_method": "alpha_test",
+          "face_dimming": true,
+          "ambient_occlusion": true
+        }
+      },
+      "minecraft:selection_box": {
+        "origin": [
+          -8,
+          0,
+          -8
+        ],
+        "size": [
+          16,
+          16,
+          16
+        ]
+      },
+      "minecraft:collision_box": {
+        "origin": [
+          -8,
+          0,
+          -8
+        ],
+        "size": [
+          16,
+          16,
+          16
+        ]
+      },
+      "minecraft:loot": "loot_tables/jetpack_stand_block/jetpack_stand_block.json",
+      "minecraft:geometry": "geometry.jetpack_stand",
+      "minecraft:destructible_by_mining": {
+        "seconds_to_destroy": 2
+      },
+      "minecraft:destructible_by_explosion": {
+        "explosion_resistance": 30
+      },
+      "minecraft:light_dampening": 0.0,
+      "minecraft:on_interact": {
+        "event": "is:jetpack_stand_state_2",
+        "condition": "q.get_equipped_item_name == 'jetpack_empty'"
+      },
+      "minecraft:on_player_placing": {
+        "event": "is:jetpack_stand_set_rotation"
+      },
+      "minecraft:map_color": "#ffffff"
+    },
+    "permutations": [
+      {
+        "condition": "q.block_property('is:jetpack_stand_states') == 1",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "jetpack_stand_empty",
+              "render_method": "alpha_test",
+              "face_dimming": true,
+              "ambient_occlusion": true
+            }
+          },
+          "minecraft:geometry": "geometry.jetpack_stand_jetpack",
+          "minecraft:loot": "loot_tables/jetpack_stand_charging.json",
+          "minecraft:destructible_by_mining": {
+            "seconds_to_destroy": 9999
+          },
+          "minecraft:on_interact": {
+            "event": "is:jetpack_stand_charging0",
+            "condition": "q.get_equipped_item_name == 'fuel_bottle'"
+          }
+        }
+      },
+      {
+        "condition": "q.block_property('is:jetpack_stand_states') == 2",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "jetpack_stand_charging0",
+              "render_method": "alpha_test",
+              "face_dimming": true,
+              "ambient_occlusion": true
+            }
+          },
+          "minecraft:geometry": "geometry.jetpack_stand_charging_0",
+          "minecraft:loot": "loot_tables/jetpack_stand_charging.json",
+          "minecraft:destructible_by_mining": {
+            "seconds_to_destroy": 9999
+          },
+          "minecraft:queued_ticking": {
+            "looping": false,
+            "interval_range": [
+              30,
+              30
+            ],
+            "on_tick": {
+              "event": "is:jetpack_stand_charging1",
+              "target": "self"
+            }
+          }
+        }
+      },
+      {
+        "condition": "q.block_property('is:jetpack_stand_states') == 3",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "jetpack_stand_charging1",
+              "render_method": "alpha_test",
+              "face_dimming": true,
+              "ambient_occlusion": true
+            }
+          },
+          "minecraft:geometry": "geometry.jetpack_stand_charging_1",
+          "minecraft:loot": "loot_tables/jetpack_stand_charging.json",
+          "minecraft:destructible_by_mining": {
+            "seconds_to_destroy": 9999
+          },
+          "minecraft:queued_ticking": {
+            "looping": false,
+            "interval_range": [
+              30,
+              30
+            ],
+            "on_tick": {
+              "event": "is:jetpack_stand_charging2",
+              "target": "self"
+            }
+          }
+        }
+      },
+      {
+        "condition": "q.block_property('is:jetpack_stand_states') == 4",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "jetpack_stand_charging2",
+              "render_method": "alpha_test",
+              "face_dimming": true,
+              "ambient_occlusion": true
+            }
+          },
+          "minecraft:geometry": "geometry.jetpack_stand_charging_2",
+          "minecraft:loot": "loot_tables/jetpack_stand_charging.json",
+          "minecraft:destructible_by_mining": {
+            "seconds_to_destroy": 9999
+          },
+          "minecraft:queued_ticking": {
+            "looping": false,
+            "interval_range": [
+              30,
+              30
+            ],
+            "on_tick": {
+              "event": "is:jetpack_stand_charging3",
+              "target": "self"
+            }
+          }
+        }
+      },
+      {
+        "condition": "q.block_property('is:jetpack_stand_states') == 5",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "jetpack_stand_charging3",
+              "render_method": "alpha_test",
+              "face_dimming": true,
+              "ambient_occlusion": true
+            }
+          },
+          "minecraft:geometry": "geometry.jetpack_stand_charging_3",
+          "minecraft:loot": "loot_tables/jetpack_stand_charging.json",
+          "minecraft:destructible_by_mining": {
+            "seconds_to_destroy": 9999
+          },
+          "minecraft:queued_ticking": {
+            "looping": false,
+            "interval_range": [
+              30,
+              30
+            ],
+            "on_tick": {
+              "event": "is:jetpack_stand_charged",
+              "target": "self"
+            }
+          }
+        }
+      },
+      {
+        "condition": "q.block_property('is:jetpack_stand_states') == 6",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "jetpack_stand_charged",
+              "render_method": "alpha_test",
+              "face_dimming": true,
+              "ambient_occlusion": true
+            }
+          },
+          "minecraft:geometry": "geometry.jetpack_stand_jetpack",
+          "minecraft:loot": "loot_tables/jetpack_stand_charging.json",
+          "minecraft:destructible_by_mining": {
+            "seconds_to_destroy": 9999
+          },
+          "minecraft:on_interact": {
+            "event": "is:jetpack_stand_state_1"
+          }
+        }
+      },
+      {
+        "condition": "q.block_property('is:rotation') == 2",
+        "components": {
+          "minecraft:rotation": [
+            0,
+            180,
+            0
+          ]
+        }
+      },
+      {
+        "condition": "q.block_property('is:rotation') == 3",
+        "components": {
+          "minecraft:rotation": [
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "condition": "q.block_property('is:rotation') == 4",
+        "components": {
+          "minecraft:rotation": [
+            0,
+            270,
+            0
+          ]
+        }
+      },
+      {
+        "condition": "q.block_property('is:rotation') == 5",
+        "components": {
+          "minecraft:rotation": [
+            0,
+            90,
+            0
+          ]
+        }
+      }
+    ],
+    "events": {
+      "is:jetpack_stand_set_rotation": {
+        "set_block_property": {
+          "is:rotation": "q.cardinal_facing_2d"
+        }
+      },
+      "is:jetpack_stand_state_1": {
+        "sequence": [
+          {
+            "set_block_property": {
+              "is:jetpack_stand_states": 0
+            }
+          },
+          {
+            "spawn_loot": {
+              "table": "loot_tables/jetpack_stand_load.json"
+            }
+          },
+          {
+            "play_sound": {
+              "sound": "armor.equip_iron",
+              "target": "self"
+            }
+          },
+          {
+            "run_command": {
+              "command": [
+                "function jetpack_reload"
+              ],
+              "target": "other"
+            }
+          }
+        ]
+      },
+      "is:jetpack_stand_state_2": {
+        "sequence": [
+          {
+            "set_block_property": {
+              "is:jetpack_stand_states": 1
+            }
+          },
+          {
+            "decrement_stack": {}
+          },
+          {
+            "play_sound": {
+              "sound": "armor.equip_iron",
+              "target": "self"
+            }
+          }
+        ]
+      },
+      "is:jetpack_stand_charging0": {
+        "sequence": [
+          {
+            "set_block_property": {
+              "is:jetpack_stand_states": 2
+            }
+          },
+          {
+            "decrement_stack": {}
+          },
+          {
+            "run_command": {
+              "command": [
+                "give @s glass_bottle"
+              ],
+              "target": "other"
+            }
+          },
+          {
+            "play_sound": {
+              "sound": "bottle.dragonbreath",
+              "target": "self"
+            }
+          }
+        ]
+      },
+      "is:jetpack_stand_charging1": {
+        "sequence": [
+          {
+            "set_block_property": {
+              "is:jetpack_stand_states": 3
+            }
+          },
+          {
+            "play_sound": {
+              "sound": "bottle.dragonbreath",
+              "target": "self"
+            }
+          }
+        ]
+      },
+      "is:jetpack_stand_charging2": {
+        "sequence": [
+          {
+            "set_block_property": {
+              "is:jetpack_stand_states": 4
+            }
+          },
+          {
+            "play_sound": {
+              "sound": "bottle.dragonbreath",
+              "target": "self"
+            }
+          }
+        ]
+      },
+      "is:jetpack_stand_charging3": {
+        "sequence": [
+          {
+            "set_block_property": {
+              "is:jetpack_stand_states": 5
+            }
+          },
+          {
+            "play_sound": {
+              "sound": "bottle.dragonbreath",
+              "target": "self"
+            }
+          }
+        ]
+      },
+      "is:jetpack_stand_charged": {
+        "sequence": [
+          {
+            "set_block_property": {
+              "is:jetpack_stand_states": 6
+            }
+          },
+          {
+            "play_sound": {
+              "sound": "beacon.deactivate",
+              "target": "self"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

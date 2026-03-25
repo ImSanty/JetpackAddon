@@ -1,0 +1,37 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "is:jetpack"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "BTB",
+      "PGP",
+      "III"
+    ],
+    "key": {
+      "I": {
+        "item": "minecraft:iron_ingot"
+      },
+      "P": {
+        "item": "is:propellant"
+      },
+      "B": {
+        "item": "minecraft:black_dye"
+      },
+      "T": {
+        "item": "is:fuel_tank"
+      },
+      "G": {
+        "item": "minecraft:glass_pane"
+      }
+    },
+    "result": {
+      "item": "is:jetpack_empty",
+      "count": 1
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "is:fuel_tank"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "III",
+      "IFI",
+      "IRI"
+    ],
+    "key": {
+      "I": {
+        "item": "minecraft:iron_ingot"
+      },
+      "F": {
+        "item": "is:fuel_bottle"
+      },
+      "R": {
+        "item": "minecraft:red_dye"
+      }
+    },
+    "result": [
+      {
+        "item": "is:fuel_tank",
+        "count": 1
+      },
+      {
+        "item": "minecraft:glass_bottle",
+        "count": 1
+      }
+    ]
+  }
+}

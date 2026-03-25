@@ -1,0 +1,14 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_brewing_mix": {
+    "description": {
+      "identifier": "is:brew_fuel_bottle"
+    },
+    "tags": [
+      "brewing_stand"
+    ],
+    "input": "minecraft:potion",
+    "reagent": "is:solidified_petroleum",
+    "output": "is:fuel_bottle"
+  }
+}
