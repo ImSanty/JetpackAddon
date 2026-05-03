@@ -1,5 +1,5 @@
 {
-  "format_version": "1.19.50",
+  "format_version": "1.21.130",
   "minecraft:block": {
     "description": {
       "identifier": "is:solidified_soil_block",
@@ -16,7 +16,7 @@
           "ambient_occlusion": true
         }
       },
-      "minecraft:unit_cube": {},
+      "minecraft:geometry": "minecraft:geometry.full_block",
       "minecraft:selection_box": {
         "origin": [
           -8,
@@ -41,7 +41,6 @@
           16
         ]
       },
-      "minecraft:breathability": "solid",
       "minecraft:map_color": "#534e42",
       "minecraft:loot": "loot_tables/solidified_soil_block.json",
       "minecraft:destructible_by_mining": {
