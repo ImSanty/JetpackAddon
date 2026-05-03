@@ -1,9 +1,12 @@
 {
-  "format_version": "1.16.100",
+  "format_version": "1.21.130",
   "minecraft:item": {
     "description": {
       "identifier": "is:jetpack",
-      "category": "equipment"
+      "menu_category": {
+        "category": "equipment",
+        "group": "minecraft:itemGroup.name.a"
+      }
     },
     "components": {
       "minecraft:max_stack_size": 1,
@@ -14,36 +17,9 @@
         "slot": "slot.armor.chest"
       },
       "minecraft:icon": {
-        "texture": "jetpack_full"
-      },
-      "minecraft:creative_category": {
-        "parent": "itemGroup.name.a"
-      }
-    },
-    "events": {
-      "is:power_mode": {
-        "sequence": [
-          {
-            "condition": "query.is_sneaking && query.scoreboard('power_mode') == 0",
-            "run_command": {
-              "command": [
-                "function test1",
-                "title @s actionbar §l§aPower Mode: §rTurbo"
-              ],
-              "target": "holder"
-            }
-          },
-          {
-            "condition": "query.is_sneaking && query.scoreboard('power_mode') == 1",
-            "run_command": {
-              "command": [
-                "function test2",
-                "title @s actionbar §l§aPower Mode: §rStandar"
-              ],
-              "target": "holder"
-            }
-          }
-        ]
+        "textures": {
+          "default": "jetpack_full"
+        }
       }
     }
   }
