@@ -1,5 +1,5 @@
 {
-  "format_version": "1.12",
+  "format_version": "1.21.130",
   "minecraft:recipe_shaped": {
     "description": {
       "identifier": "is:jetpack_stand"
@@ -14,8 +14,7 @@
     ],
     "key": {
       "C": {
-        "item": "minecraft:concrete",
-        "data": "0"
+        "item": "minecraft:white_concrete"
       },
       "I": {
         "item": "minecraft:iron_ingot"
