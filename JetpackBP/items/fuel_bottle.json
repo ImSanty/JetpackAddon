@@ -1,9 +1,12 @@
 {
-  "format_version": "1.16.100",
+  "format_version": "1.21.130",
   "minecraft:item": {
     "description": {
       "identifier": "is:fuel_bottle",
-      "category": "equipment"
+      "menu_category": {
+        "category": "equipment",
+        "group": "minecraft:itemGroup.name.tools"
+      }
     },
     "components": {
       "minecraft:use_duration": 1.6,
@@ -11,44 +14,18 @@
         "nutrition": 4,
         "saturation_modifier": "low",
         "can_always_eat": true,
-        "using_converts_to": "glass_bottle",
-        "on_consume": {
-          "event": "poisoning",
-          "target": "self"
-        }
+        "using_converts_to": "minecraft:glass_bottle"
       },
       "minecraft:use_animation": "drink",
       "minecraft:icon": {
-        "texture": "fuel_bottle"
-      },
-      "minecraft:creative_category": {
-        "parent": "itemGroup.name.tools"
+        "textures": {
+          "default": "fuel_bottle"
+        }
       },
       "minecraft:display_name": {
         "value": "Fuel Bottle\n§cPoison III (0:10)\n§cNausea (0:10)"
-      }
-    },
-    "events": {
-      "poisoning": {
-        "sequence": [
-          {
-            "add_mob_effect": {
-              "effect": "poison",
-              "duration": 10,
-              "amplifier": 2,
-              "target": "holder"
-            }
-          },
-          {
-            "add_mob_effect": {
-              "effect": "nausea",
-              "duration": 10,
-              "amplifier": 0,
-              "target": "holder"
-            }
-          }
-        ]
-      }
+      },
+      "is:fuel_bottle": {}
     }
   }
 }
