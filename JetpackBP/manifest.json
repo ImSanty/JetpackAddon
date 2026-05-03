@@ -5,14 +5,14 @@
     "description": "Add-on by §b@ImSanty_",
     "uuid": "2b79d279-d9e5-44d9-a7a7-bcbb92fa488e",
     "version": [
-      5,
+      6,
       0,
       0
     ],
     "min_engine_version": [
       1,
-      19,
-      0
+      21,
+      130
     ]
   },
   "modules": [
@@ -21,7 +21,19 @@
       "type": "data",
       "uuid": "6ea4aeef-df29-4409-a683-7319d05f35d8",
       "version": [
-        5,
+        6,
+        0,
+        0
+      ]
+    },
+    {
+      "description": "Jetpack Add-on scripts",
+      "type": "script",
+      "language": "javascript",
+      "uuid": "365fbdd1-1445-4ab8-9c60-c78b756e76c1",
+      "entry": "scripts/main.js",
+      "version": [
+        6,
         0,
         0
       ]
@@ -31,10 +43,14 @@
     {
       "uuid": "5e1c9b3e-c755-4e3a-8862-ead3e80523c9",
       "version": [
-        5,
+        6,
         0,
         0
       ]
+    },
+    {
+      "module_name": "@minecraft/server",
+      "version": "2.6.0"
     }
   ]
 }
