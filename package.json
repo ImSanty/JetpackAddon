@@ -4,12 +4,17 @@
   "description": "Dev workspace for Minecraft Bedrock Jetpack addon with sync script to Minecraft dev folders.",
   "private": true,
   "scripts": {
-    "sync": "node scripts/sync-mc-dev.js"
+    "sync": "node scripts/sync-mc-dev.js",
+    "check": "tsc --allowJs --checkJs --noEmit --noImplicitAny false --moduleResolution bundler --module esnext --target es2022 JetpackBP/scripts/main.js"
   },
   "engines": {
     "node": ">=18"
   },
   "dependencies": {
     "dotenv": "^17.2.3"
+  },
+  "devDependencies": {
+    "@minecraft/server": "^2.6.0",
+    "typescript": "^6.0.3"
   }
 }
