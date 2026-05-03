@@ -1,5 +1,5 @@
 {
-  "format_version": "1.12",
+  "format_version": "1.21.130",
   "minecraft:recipe_brewing_mix": {
     "description": {
       "identifier": "is:brew_fuel_bottle"

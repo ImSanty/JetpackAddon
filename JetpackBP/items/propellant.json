@@ -1,17 +1,19 @@
 {
-  "format_version": "1.16.100",
+  "format_version": "1.21.130",
   "minecraft:item": {
     "description": {
       "identifier": "is:propellant",
-      "category": "equipment"
+      "menu_category": {
+        "category": "equipment",
+        "group": "minecraft:itemGroup.name.tools"
+      }
     },
     "components": {
       "minecraft:max_stack_size": 64,
       "minecraft:icon": {
-        "texture": "propellant"
-      },
-      "minecraft:creative_category": {
-        "parent": "itemGroup.name.tools"
+        "textures": {
+          "default": "propellant"
+        }
       }
     }
   }
