@@ -198,7 +198,9 @@ function applyCreateStyleFlight(player) {
       ? Math.max(velocity.y, targetVertical)
       : Math.min(velocity.y + JETPACK_ACCELERATION, targetVertical);
 
-  const verticalGain = hoverEnabled ? HOVER_VERTICAL_DAMPING : JETPACK_ACCELERATION;
+  const verticalGain = hoverEnabled
+    ? HOVER_VERTICAL_DAMPING
+    : JETPACK_ACCELERATION;
   player.applyImpulse({
     x: (targetX - velocity.x) * JETPACK_ACCELERATION,
     y: (targetMotionY - velocity.y) * verticalGain,
