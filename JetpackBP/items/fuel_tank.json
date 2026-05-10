@@ -15,6 +15,9 @@
           "default": "fuel_tank"
         }
       },
+      "minecraft:projectile": {
+        "projectile_entity": "is:fuel_tank"
+      },
       "minecraft:throwable": {
         "do_swing_animation": true,
         "max_draw_duration": 0,

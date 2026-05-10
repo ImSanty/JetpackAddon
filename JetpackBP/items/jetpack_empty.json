@@ -10,10 +10,8 @@
     },
     "components": {
       "minecraft:max_stack_size": 1,
-      "minecraft:armor": {
-        "protection": 0
-      },
       "minecraft:wearable": {
+        "protection": 0,
         "slot": "slot.armor.chest"
       },
       "minecraft:icon": {

@@ -31,6 +31,10 @@
       },
       "minecraft:loot": "loot_tables/jetpack_stand_block/jetpack_stand_block.json",
       "minecraft:geometry": "geometry.jetpack_stand",
+      "minecraft:tick": {
+        "looping": false,
+        "interval_range": [30, 30]
+      },
       "minecraft:destructible_by_mining": {
         "seconds_to_destroy": 2
       },
@@ -53,7 +57,6 @@
             }
           },
           "minecraft:geometry": "geometry.jetpack_stand_jetpack",
-          "minecraft:loot": "loot_tables/jetpack_stand_charging.json",
           "minecraft:destructible_by_mining": {
             "seconds_to_destroy": 9999
           }
@@ -71,7 +74,6 @@
             }
           },
           "minecraft:geometry": "geometry.jetpack_stand_charging_0",
-          "minecraft:loot": "loot_tables/jetpack_stand_charging.json",
           "minecraft:destructible_by_mining": {
             "seconds_to_destroy": 9999
           },
@@ -93,7 +95,6 @@
             }
           },
           "minecraft:geometry": "geometry.jetpack_stand_charging_1",
-          "minecraft:loot": "loot_tables/jetpack_stand_charging.json",
           "minecraft:destructible_by_mining": {
             "seconds_to_destroy": 9999
           },
@@ -115,7 +116,6 @@
             }
           },
           "minecraft:geometry": "geometry.jetpack_stand_charging_2",
-          "minecraft:loot": "loot_tables/jetpack_stand_charging.json",
           "minecraft:destructible_by_mining": {
             "seconds_to_destroy": 9999
           },
@@ -137,7 +137,6 @@
             }
           },
           "minecraft:geometry": "geometry.jetpack_stand_charging_3",
-          "minecraft:loot": "loot_tables/jetpack_stand_charging.json",
           "minecraft:destructible_by_mining": {
             "seconds_to_destroy": 9999
           },
@@ -159,7 +158,6 @@
             }
           },
           "minecraft:geometry": "geometry.jetpack_stand_jetpack",
-          "minecraft:loot": "loot_tables/jetpack_stand_charging.json",
           "minecraft:destructible_by_mining": {
             "seconds_to_destroy": 9999
           }
@@ -168,25 +166,33 @@
       {
         "condition": "query.block_state('is:rotation') == 2",
         "components": {
-          "minecraft:rotation": [0, 180, 0]
+          "minecraft:transformation": {
+            "rotation": [0, 180, 0]
+          }
         }
       },
       {
         "condition": "query.block_state('is:rotation') == 3",
         "components": {
-          "minecraft:rotation": [0, 0, 0]
+          "minecraft:transformation": {
+            "rotation": [0, 0, 0]
+          }
         }
       },
       {
         "condition": "query.block_state('is:rotation') == 4",
         "components": {
-          "minecraft:rotation": [0, 270, 0]
+          "minecraft:transformation": {
+            "rotation": [0, 270, 0]
+          }
         }
       },
       {
         "condition": "query.block_state('is:rotation') == 5",
         "components": {
-          "minecraft:rotation": [0, 90, 0]
+          "minecraft:transformation": {
+            "rotation": [0, 90, 0]
+          }
         }
       }
     ]
