@@ -1,0 +1,21 @@
+{
+	"format_version": "1.10.0",
+	"animations": {
+		"animation.jetpack.test": {
+			"loop": true,
+			"animation_length": 0.1,
+			"particle_effects": {
+				"0.0417": [
+					{
+						"effect": "jetpack_combustion",
+						"locator": "particle1"
+					},
+					{
+						"effect": "jetpack_combustion",
+						"locator": "particle2"
+					}
+				]
+			}
+		}
+	}
+}
